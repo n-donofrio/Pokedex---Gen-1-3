@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+
+    <link rel="stylesheet" href="pokedex.css">
+    <script src="pokedex.js"></script>
+    <style>
+        /* Additional CSS for positioning the search bar */
+        #content-box {
+            position: relative;
+        }
+
+        #search-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #f0f0f0;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        #pokemon-info,
+        #pokemon-list {
+            margin-top: 50px; /* Adjust this value based on your design */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- We want a content box that divides into two sides, left for pokemon info, right for list -->
+    <div id="content-box">
+        <!-- Add a search bar -->
+        <div id="search-bar">
+            <input type="text" id="pokemon-search" placeholder="Search for a Pokémon">
+            <button id="search-button">Search</button>
+        </div>
+
+        <!-- Left Side, display pokemon info -->
+        <div id="pokemon-info">
+            <img id="pokemon-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
+            <div id="pokemon-types">
+                <span class="type-box grass">GRASS</span><span class="type-box poison">POISON</span>
+            </div>
+            <div id="pokemon-description"></div>
+
+           <!-- Add audio element for sound -->
+    <audio id="pokemon-audio" autoplay loop>
+        <source src="onlymp3.to - Pokemon FireRed LeafGreen OST Title Screen-H3mIEbo47fY-192k-1691705667.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+        </div>
+        <!-- Right side, display pokemon list -->
+        <div id="pokemon-list">
+        </div>
+    </div>
+</body>
+</html>
